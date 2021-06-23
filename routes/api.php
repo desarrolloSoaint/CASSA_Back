@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InvoicesController;
 use App\Http\Controllers\AuthController;
 
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,6 +19,7 @@ use App\Http\Controllers\AuthController;
 
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/register', [AuthController::class, 'register']);
+
 
 Route::group(['middleware'=>['jwt.verify']], function() {
 
